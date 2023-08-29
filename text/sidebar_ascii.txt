@@ -1,0 +1,24 @@
+**GIF to ASCII Converter App**
+
+Hey there! Ready for some cool tech art? Dive into our app where we take your fav GIFs and turn them into rad ASCII animations. It's all about seeing your GIFs in a new, old-school light!
+
+**For The MONAD Gang:**
+
+Big shoutout to the Monad community! This one's for you. Who says you need a paintbrush to make art? Sometimes, a line of code does the trick. Hopefully you guys enjoy this!
+
+**Features:**
+
+Easy Peasy: Just pop in your GIF and watch the magic happen.
+Top-notch Transforms: Our tech ensures your ASCII version keeps all the vibes of the original.
+Share the Love: Got a cool ASCII animation? Save it and show it off!
+
+**What's Next?**
+
+Stay tuned! We've got updates coming your way. Soon, you'll have all the tools to tweak and twist your ASCII creations just the way you want.
+
+Whether you're an ASCII guru or just up for some fun, our GIF to ASCII Converter App is your new playground. Dive in and enjoy the retro magic!
+
+
+
+
+
