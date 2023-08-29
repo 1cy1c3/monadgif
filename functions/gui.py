@@ -31,9 +31,9 @@ def load_button(name):
         st.markdown(ref_buttons_css, unsafe_allow_html=True)
 
 
-def load_gif(file_bytes):
+def load_gif(file_bytes, bg_color, font_color, font_size, speed):
     frames = gif.extract_frames_as_bytesio(io.BytesIO(file_bytes))
-    ascii_gif = gif.generate_ascii_gif(frames)
+    ascii_gif = gif.generate_ascii_gif(frames, bg_color, font_color, font_size, speed)
     st.image(ascii_gif, caption="ASCII Animation", use_column_width=True)
 
     ascii_gif_data = ascii_gif.getvalue()
@@ -43,7 +43,7 @@ def load_gif(file_bytes):
 def load_main_ascii():
     gif_col, left_col, right_col = st.columns([1, 1, 3])
     with right_col:
-        st.markdown("# GIF 2 ASCII")
+        st.markdown("# MONADSCII")
         st.markdown("This project is dedicated to the MONAD Community!")
         st.markdown("Have fun generating some ascii art")
     with left_col:

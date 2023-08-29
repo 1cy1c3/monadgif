@@ -61,7 +61,7 @@ def _extract_frames_as_bytesio(gif_path):
 
 
 @st.cache_data()
-def generate_ascii_gif(frames_io):
+def generate_ascii_gif(frames_io, bg_color, font_color, font_size, speed):
     converter = ASCIIConverter()
     frames = converter.generate_ascii_art_from_gif(frames_io)
 
@@ -69,11 +69,12 @@ def generate_ascii_gif(frames_io):
     pygame.init()
 
     # Constants
-    WIDTH, HEIGHT = ss["width"], ss["height"]
-    BACKGROUND_COLOR = (131, 110, 249)
-    FONT_COLOR = (38, 0, 31)
-    FONT_SIZE = 5
-    SPEED = 0.05
+    WIDTH = ss["width"] * font_size / 5
+    HEIGHT = ss["height"] * font_size / 5
+    BACKGROUND_COLOR = hex_to_rgb(bg_color)
+    FONT_COLOR = hex_to_rgb(font_color)
+    FONT_SIZE = font_size
+    SPEED = speed
 
     # Set up the display and font
     screen = pygame.display.set_mode((WIDTH, HEIGHT))
@@ -142,3 +143,15 @@ def strip_whitespace_from_ascii_frames(ascii_frames):
         stripped_frames.append(stripped_frame)
 
     return stripped_frames
+
+
+def hex_to_rgb(hex_color):
+    # Remove the hash at the start if it's there
+    hex_color = hex_color.lstrip('#')
+
+    # Parse the red, green, and blue components
+    r = int(hex_color[0:2], 16)
+    g = int(hex_color[2:4], 16)
+    b = int(hex_color[4:6], 16)
+
+    return r, g, b
