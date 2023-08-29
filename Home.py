@@ -38,8 +38,8 @@ if option == "Upload a GIF":
 
 elif option == "Enter a GIF URL":
     file_bytes = None
-    gif_url = st.text_input("Enter the GIF URL:")
     with st.form("upload"):
+        gif_url = st.text_input("Enter the GIF URL:")
         left_col, right_col = st.columns([1, 6])
         with left_col:
             bg_color = st.color_picker("Select Background Color", value="#836EF9")
